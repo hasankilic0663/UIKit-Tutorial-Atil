@@ -60,6 +60,12 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             destinationVC.selectedSimpson = chosenSimpson
         }
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            self.mySimpsons.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
 
 }
 
