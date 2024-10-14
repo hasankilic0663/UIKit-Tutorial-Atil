@@ -22,21 +22,42 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector (addButtonClicked))//barbutton olusturma sag ust koseye yani                         System ıtemde add secerek + gorunumu cıkarıyo kamera
+        
+        getData()
     }
     
-    func getData(){
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name:NSNotification.Name(rawValue: "newData"), object: nil)//bum esajı gordugunde getdatayı calıstıracak , cagıracak
+    }
+    @objc func getData(){
+        nameArray.removeAll(keepingCapacity: false)
+        idArray.removeAll(keepingCapacity: false) // bırden fazla kez eklemesın tablevıew a yukarda getdata cagırdıgmız ıcın 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
 //        context.fetch()//cek verileri
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
-        fetchRequest.returnsObjectsAsFaults = false
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")//veriyi cekme islemi isteği
+        fetchRequest.returnsObjectsAsFaults = false // cashten okumada false yaparak daha hızlı yapıyoz. kucuk verile için tabi
         
         do{
             let results = try context.fetch(fetchRequest)// bana geri dondurecek dizi olarak
+            for result in results as! [NSManagedObject]{ // CRUD sistemi yapmasına olanak tanır NSManagedObject
+                if let name = result.value(forKey: "name") as? String{ // eger name string se  işlem yap
+                    self.nameArray.append(name)
+                    
+                }
+                if let id = result.value(forKey: "id") as? UUID{
+                    self.idArray.append(id)
+                }
+                
+            }
+            
+            self.tableView.reloadData()
+            
         }
         catch{
+            print("error")
         }
         
             
@@ -51,12 +72,12 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return nameArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = nameArray[indexPath.row]
         return cell
         
     }

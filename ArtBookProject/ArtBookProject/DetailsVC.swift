@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class DetailsVC: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {//Picker Kontrolleri için
 
     @IBOutlet weak var yearText: UITextField!
     @IBOutlet weak var artistText: UITextField!
@@ -16,36 +16,45 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        //Recognizer
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))//klavye kapatmak ıcın gesture recognizer
         view.addGestureRecognizer(gestureRecognizer)//?
-        imageView.isUserInteractionEnabled = true
-        let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
-        imageView.addGestureRecognizer(imageTapRecognizer)
+        imageView.isUserInteractionEnabled = true// gorsele tıklanmayı acıyorsun
+        let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))//tıklanınca selector ıle napcan onu sıyuron
+        imageView.addGestureRecognizer(imageTapRecognizer)// imageviewde kullanıyon bunu
         
     }
     
+    @objc func hideKeyboard() {
+        view.endEditing(true)//klavyeyi kapatma için
+    }
+    
     @objc func selectImage() {
-        let picker = UIImagePickerController()
+        let picker = UIImagePickerController()//KUllanıcı medya kutuphanesıne erısmek ıcınkullanıyoruz
         picker.delegate = self
         picker.sourceType = .photoLibrary // foto kutuphanesini acıccak galeri yani
         picker.allowsEditing = true  // fotoyu edıtleme kbuyutmek kucultem
         present(picker, animated: true, completion: nil)
     }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {//görseli seçince kapatıcak ve ne ypacak gibi bişey
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {//görseli seçince kapatıcak ve ne ypacak gibi bişey
+//        imageView.image = info[.originalImage] as? UIImage
+//        self.dismiss(animated: true, completion: nil)//kapat
+//        
+//    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
-        self.dismiss(animated: true, completion: nil)//kapat
+        self.dismiss(animated: true, completion: nil)//anımasyonlu kapa , kapanınca bısey yapmayı ıstıyonmu hayır = nişl
         
     }
     
 
-    @objc func hideKeyboard() {
-        view.endEditing(true)//klavyeyi kapatma için
-    }
+   
   
     @IBAction func saveButtonClicked(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newPainting = NSEntityDescription.insertNewObject(forEntityName: "Paintings", into: context)
+        
         newPainting.setValue(nameText.text!, forKey: "name")
         newPainting.setValue(artistText.text!, forKey: "artist")
 //        newPainting.setValue(nameText.text, forKey: "name")
@@ -62,7 +71,11 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         }catch {
             print("error")
         }
-            
+           
+        //mesaj gonderıyo uyarı dıger ekranlarada
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)//newdata dıye ekranlara mesaj gonderdı
+        
+        self.navigationController?.popViewController(animated: true)// geri ekrana gitme
     }
     
 }
