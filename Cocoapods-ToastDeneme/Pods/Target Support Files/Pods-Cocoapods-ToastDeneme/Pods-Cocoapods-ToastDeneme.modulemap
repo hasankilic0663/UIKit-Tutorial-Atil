@@ -1,0 +1,6 @@
+framework module Pods_Cocoapods_ToastDeneme {
+  umbrella header "Pods-Cocoapods-ToastDeneme-umbrella.h"
+
+  export *
+  module * { export * }
+}
