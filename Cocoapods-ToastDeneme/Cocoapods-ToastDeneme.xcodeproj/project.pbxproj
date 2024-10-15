@@ -13,7 +13,6 @@
 		6188B6AB2CBD5C24000580C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6188B69F2CBD5C24000580C1 /* Assets.xcassets */; };
 		6188B6AD2CBD5C24000580C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6188B6A22CBD5C24000580C1 /* LaunchScreen.storyboard */; };
 		6188B6AE2CBD5C24000580C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6188B6A42CBD5C24000580C1 /* Main.storyboard */; };
-		8777FDC743F41F4A6D136AD4 /* Pods_Cocoapods_ToastDeneme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C471FEA2A03C191D8CA65591 /* Pods_Cocoapods_ToastDeneme.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8777FDC743F41F4A6D136AD4 /* Pods_Cocoapods_ToastDeneme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +136,6 @@
 			);
 			mainGroup = 6188B67D2CBD5BFA000580C1;
 			packageReferences = (
-				6188B6AF2CBD6559000580C1 /* XCRemoteSwiftPackageReference "Toast" */,
 			);
 			productRefGroup = 6188B6872CBD5BFA000580C1 /* Products */;
 			projectDirPath = "";
@@ -436,17 +433,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6188B6AF2CBD6559000580C1 /* XCRemoteSwiftPackageReference "Toast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scalessec/Toast.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 6188B67E2CBD5BFA000580C1 /* Project object */;
 }
