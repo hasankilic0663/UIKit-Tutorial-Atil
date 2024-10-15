@@ -25,8 +25,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector (addButtonClicked))//barbutton olusturma sag ust koseye yani                         System ıtemde add secerek + gorunumu cıkarıyo kamera
+
         
         getData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
