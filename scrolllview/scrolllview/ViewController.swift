@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//        contentView.addSubview(view1)
+//        contentView.addSubview(view2)
+//        contentView.addSubview(view3)
+//        scroll.addSubview(view1)
+//        scroll.addSubview(view3)
+//        scroll.addSubview(view2)
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+//        scroll.contentSize = CGSize(width: contentView.frame.width, height: contentView.frame.height)
+    }
 
 }
 

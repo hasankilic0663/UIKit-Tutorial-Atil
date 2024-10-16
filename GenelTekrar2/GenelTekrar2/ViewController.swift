@@ -73,7 +73,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = nameArray[indexPath.row]
+        cell.textLabel?.text = "Name: " + nameArray[indexPath.row]
         return cell
     }
     
@@ -81,6 +81,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         selectedPainting = nameArray[indexPath.row]
         selectedPaintingId = idArray[indexPath.row]
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true) // Hücre tıklandıktan sonra seçimi kaldır
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
