@@ -16,7 +16,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     var nameArray  = [String]()
     var idArray  = [UUID]()
-   
+    var selectedPainting = ""
+    var selectedPaintingId :  UUID?
+    
     
 
     override func viewDidLoad() {
@@ -26,9 +28,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         tableView.dataSource = self
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Oyun", style: .plain, target: self, action: #selector(actionButtonClicked))
+        
+        title = "Genel Tekrar App"
+        getData()
     }
-    
-    func getData() {
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newData"), object: nil)
+    }
+    @objc func getData() {
         nameArray.removeAll(keepingCapacity: false)
         idArray.removeAll(keepingCapacity: false)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -43,14 +50,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                 nameArray.append(results.value(forKey: "name") as! String)
                 idArray.append(results.value(forKey: "id") as! UUID)
             }
-            self.
+            self.tableView.reloadData()
         }catch{
             print("Error")
         }
         
     }
     @objc func addButtonClicked(){
-        
+        selectedPainting = ""
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
         
     }
@@ -61,13 +68,28 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return nameArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Test"
+        cell.textLabel?.text = nameArray[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPainting = nameArray[indexPath.row]
+        selectedPaintingId = idArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC"{
+            let destinationVC = segue.destination as! DetailsVC
+            destinationVC.chosenPainting = selectedPainting
+            destinationVC.chosenPaintingId = selectedPaintingId
+            
+        }
     }
 }
 

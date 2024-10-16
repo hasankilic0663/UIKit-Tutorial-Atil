@@ -6,34 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		614D06512CBFA55E004188F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614D06442CBFA55E004188F1 /* Assets.xcassets */; };
-		614D06532CBFA55E004188F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614D064A2CBFA55E004188F1 /* LaunchScreen.storyboard */; };
-		614D06542CBFA55E004188F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614D064C2CBFA55E004188F1 /* Main.storyboard */; };
-		614D06552CBFA55E004188F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D06432CBFA55E004188F1 /* AppDelegate.swift */; };
-		614D06562CBFA55E004188F1 /* DetailsKenny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D06452CBFA55E004188F1 /* DetailsKenny.swift */; };
-		614D06572CBFA55E004188F1 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D06462CBFA55E004188F1 /* DetailsVC.swift */; };
-		614D06582CBFA55E004188F1 /* GenelTekrar2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 614D06472CBFA55E004188F1 /* GenelTekrar2.xcdatamodeld */; };
-		614D06592CBFA55E004188F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D064D2CBFA55E004188F1 /* SceneDelegate.swift */; };
-		614D065A2CBFA55E004188F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D064E2CBFA55E004188F1 /* ViewController.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		614D06432CBFA55E004188F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		614D06442CBFA55E004188F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		614D06452CBFA55E004188F1 /* DetailsKenny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsKenny.swift; sourceTree = "<group>"; };
-		614D06462CBFA55E004188F1 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
-		614D06482CBFA55E004188F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		614D06492CBFA55E004188F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		614D064B2CBFA55E004188F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		614D064D2CBFA55E004188F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		614D064E2CBFA55E004188F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		614D06502CBFA55E004188F1 /* GenelTekrar2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GenelTekrar2.xcdatamodel; sourceTree = "<group>"; };
-		619DB7DB2CBE971000BBCCBD /* GenelTekrar2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenelTekrar2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		614D06282CBFA53B004188F1 /* TravelBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		614D063D2CBFA53D004188F1 /* Exceptions for "TravelBook" folder in "TravelBook" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 614D06272CBFA53B004188F1 /* TravelBook */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		614D062A2CBFA53B004188F1 /* TravelBook */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				614D063D2CBFA53D004188F1 /* Exceptions for "TravelBook" folder in "TravelBook" target */,
+			);
+			path = TravelBook;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		619DB7D82CBE971000BBCCBD /* Frameworks */ = {
+		614D06252CBFA53B004188F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,35 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		614D064F2CBFA55E004188F1 /* GenelTekrar2 */ = {
+		614D061F2CBFA53B004188F1 = {
 			isa = PBXGroup;
 			children = (
-				614D06432CBFA55E004188F1 /* AppDelegate.swift */,
-				614D06442CBFA55E004188F1 /* Assets.xcassets */,
-				614D06452CBFA55E004188F1 /* DetailsKenny.swift */,
-				614D06462CBFA55E004188F1 /* DetailsVC.swift */,
-				614D06472CBFA55E004188F1 /* GenelTekrar2.xcdatamodeld */,
-				614D06482CBFA55E004188F1 /* Info.plist */,
-				614D064A2CBFA55E004188F1 /* LaunchScreen.storyboard */,
-				614D064C2CBFA55E004188F1 /* Main.storyboard */,
-				614D064D2CBFA55E004188F1 /* SceneDelegate.swift */,
-				614D064E2CBFA55E004188F1 /* ViewController.swift */,
-			);
-			path = GenelTekrar2;
-			sourceTree = "<group>";
-		};
-		619DB7D22CBE971000BBCCBD = {
-			isa = PBXGroup;
-			children = (
-				614D064F2CBFA55E004188F1 /* GenelTekrar2 */,
-				619DB7DC2CBE971000BBCCBD /* Products */,
+				614D062A2CBFA53B004188F1 /* TravelBook */,
+				614D06292CBFA53B004188F1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		619DB7DC2CBE971000BBCCBD /* Products */ = {
+		614D06292CBFA53B004188F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				619DB7DB2CBE971000BBCCBD /* GenelTekrar2.app */,
+				614D06282CBFA53B004188F1 /* TravelBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,109 +61,84 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		619DB7DA2CBE971000BBCCBD /* GenelTekrar2 */ = {
+		614D06272CBFA53B004188F1 /* TravelBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 619DB7F12CBE971100BBCCBD /* Build configuration list for PBXNativeTarget "GenelTekrar2" */;
+			buildConfigurationList = 614D063E2CBFA53D004188F1 /* Build configuration list for PBXNativeTarget "TravelBook" */;
 			buildPhases = (
-				619DB7D72CBE971000BBCCBD /* Sources */,
-				619DB7D82CBE971000BBCCBD /* Frameworks */,
-				619DB7D92CBE971000BBCCBD /* Resources */,
+				614D06242CBFA53B004188F1 /* Sources */,
+				614D06252CBFA53B004188F1 /* Frameworks */,
+				614D06262CBFA53B004188F1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GenelTekrar2;
+			fileSystemSynchronizedGroups = (
+				614D062A2CBFA53B004188F1 /* TravelBook */,
+			);
+			name = TravelBook;
 			packageProductDependencies = (
 			);
-			productName = GenelTekrar2;
-			productReference = 619DB7DB2CBE971000BBCCBD /* GenelTekrar2.app */;
+			productName = TravelBook;
+			productReference = 614D06282CBFA53B004188F1 /* TravelBook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		619DB7D32CBE971000BBCCBD /* Project object */ = {
+		614D06202CBFA53B004188F1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					619DB7DA2CBE971000BBCCBD = {
+					614D06272CBFA53B004188F1 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = 619DB7D62CBE971000BBCCBD /* Build configuration list for PBXProject "GenelTekrar2" */;
+			buildConfigurationList = 614D06232CBFA53B004188F1 /* Build configuration list for PBXProject "TravelBook" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 619DB7D22CBE971000BBCCBD;
+			mainGroup = 614D061F2CBFA53B004188F1;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 619DB7DC2CBE971000BBCCBD /* Products */;
+			productRefGroup = 614D06292CBFA53B004188F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				619DB7DA2CBE971000BBCCBD /* GenelTekrar2 */,
+				614D06272CBFA53B004188F1 /* TravelBook */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		619DB7D92CBE971000BBCCBD /* Resources */ = {
+		614D06262CBFA53B004188F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				614D06512CBFA55E004188F1 /* Assets.xcassets in Resources */,
-				614D06532CBFA55E004188F1 /* LaunchScreen.storyboard in Resources */,
-				614D06542CBFA55E004188F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		619DB7D72CBE971000BBCCBD /* Sources */ = {
+		614D06242CBFA53B004188F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				614D06552CBFA55E004188F1 /* AppDelegate.swift in Sources */,
-				614D06562CBFA55E004188F1 /* DetailsKenny.swift in Sources */,
-				614D06572CBFA55E004188F1 /* DetailsVC.swift in Sources */,
-				614D06582CBFA55E004188F1 /* GenelTekrar2.xcdatamodeld in Sources */,
-				614D06592CBFA55E004188F1 /* SceneDelegate.swift in Sources */,
-				614D065A2CBFA55E004188F1 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		614D064A2CBFA55E004188F1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				614D06492CBFA55E004188F1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		614D064C2CBFA55E004188F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				614D064B2CBFA55E004188F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		619DB7F22CBE971100BBCCBD /* Debug */ = {
+		614D063F2CBFA53D004188F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -189,7 +146,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GenelTekrar2/Info.plist;
+				INFOPLIST_FILE = TravelBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -200,7 +157,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hasankilic.GenelTekrar2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hasankilic.TravelBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -208,7 +165,7 @@
 			};
 			name = Debug;
 		};
-		619DB7F32CBE971100BBCCBD /* Release */ = {
+		614D06402CBFA53D004188F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -216,7 +173,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GenelTekrar2/Info.plist;
+				INFOPLIST_FILE = TravelBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -227,7 +184,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hasankilic.GenelTekrar2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hasankilic.TravelBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -235,7 +192,7 @@
 			};
 			name = Release;
 		};
-		619DB7F42CBE971100BBCCBD /* Debug */ = {
+		614D06412CBFA53D004188F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,7 +255,7 @@
 			};
 			name = Debug;
 		};
-		619DB7F52CBE971100BBCCBD /* Release */ = {
+		614D06422CBFA53D004188F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -357,38 +314,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		619DB7D62CBE971000BBCCBD /* Build configuration list for PBXProject "GenelTekrar2" */ = {
+		614D06232CBFA53B004188F1 /* Build configuration list for PBXProject "TravelBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				619DB7F42CBE971100BBCCBD /* Debug */,
-				619DB7F52CBE971100BBCCBD /* Release */,
+				614D06412CBFA53D004188F1 /* Debug */,
+				614D06422CBFA53D004188F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		619DB7F12CBE971100BBCCBD /* Build configuration list for PBXNativeTarget "GenelTekrar2" */ = {
+		614D063E2CBFA53D004188F1 /* Build configuration list for PBXNativeTarget "TravelBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				619DB7F22CBE971100BBCCBD /* Debug */,
-				619DB7F32CBE971100BBCCBD /* Release */,
+				614D063F2CBFA53D004188F1 /* Debug */,
+				614D06402CBFA53D004188F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		614D06472CBFA55E004188F1 /* GenelTekrar2.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				614D06502CBFA55E004188F1 /* GenelTekrar2.xcdatamodel */,
-			);
-			currentVersion = 614D06502CBFA55E004188F1 /* GenelTekrar2.xcdatamodel */;
-			path = GenelTekrar2.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 619DB7D32CBE971000BBCCBD /* Project object */;
+	rootObject = 614D06202CBFA53B004188F1 /* Project object */;
 }
