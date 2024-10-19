@@ -73,17 +73,6 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         // Do any additional setup after loading the view.
         
         
