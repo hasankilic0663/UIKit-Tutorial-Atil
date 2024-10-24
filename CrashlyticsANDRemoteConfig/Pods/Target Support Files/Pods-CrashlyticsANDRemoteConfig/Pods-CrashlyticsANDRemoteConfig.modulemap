@@ -1,0 +1,6 @@
+framework module Pods_CrashlyticsANDRemoteConfig {
+  umbrella header "Pods-CrashlyticsANDRemoteConfig-umbrella.h"
+
+  export *
+  module * { export * }
+}

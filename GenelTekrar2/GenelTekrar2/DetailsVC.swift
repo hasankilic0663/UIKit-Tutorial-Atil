@@ -26,7 +26,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         if chosenPainting != "" {
             
             saveButton.isHidden = true
-            
+            imageView.isUserInteractionEnabled = false
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
@@ -63,10 +63,17 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         }
         else{
             saveButton.isHidden = false
-            saveButton.isEnabled = false
+//            saveButton.isEnabled = false
             nameText.text = ""
             artistText.text = ""
             yearText.text = ""
+            
+            
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+            view.addGestureRecognizer(gestureRecognizer)
+            imageView.isUserInteractionEnabled = true // image a tıklanmayı etkınlestırdık
+            let imageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
+            imageView.addGestureRecognizer(imageTapGestureRecognizer)
         }
         
         
@@ -74,13 +81,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         
         
         // Do any additional setup after loading the view.
-        
-        
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        view.addGestureRecognizer(gestureRecognizer)
-        imageView.isUserInteractionEnabled = true // image a tıklanmayı etkınlestırdık
-        let imageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
-        imageView.addGestureRecognizer(imageTapGestureRecognizer)
+     
         
     }
     
