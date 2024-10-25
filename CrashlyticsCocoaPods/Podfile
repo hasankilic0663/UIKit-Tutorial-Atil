@@ -8,6 +8,7 @@ target 'CrashlyticsCocoaPods' do
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
 	pod 'FirebaseCore'
+	pod 'FirebaseCrashlytics'
   # Pods for CrashlyticsCocoaPods
 
 end

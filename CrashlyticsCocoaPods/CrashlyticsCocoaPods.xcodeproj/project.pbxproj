@@ -14,7 +14,7 @@
 		61A6F3C42CCA223700BE127A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6F3BC2CCA223700BE127A /* SceneDelegate.swift */; };
 		61A6F3C52CCA223700BE127A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6F3BD2CCA223700BE127A /* ViewController.swift */; };
 		61A6F3C72CCA242E00BE127A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61A6F3C62CCA242E00BE127A /* GoogleService-Info.plist */; };
-		CA58DE8FF1CBB76F1E8D5548 /* Pods_CrashlyticsCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68631A1C08FCC3024281DE90 /* Pods_CrashlyticsCocoaPods.framework */; };
+		F3E0B04D8FD171D8A443CBBB /* Pods_CrashlyticsCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC343B8E9648D8BC48345EBD /* Pods_CrashlyticsCocoaPods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		61A6F3BC2CCA223700BE127A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		61A6F3BD2CCA223700BE127A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61A6F3C62CCA242E00BE127A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		68631A1C08FCC3024281DE90 /* Pods_CrashlyticsCocoaPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrashlyticsCocoaPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F37939B81A795F3B47EE5617 /* Pods-CrashlyticsCocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashlyticsCocoaPods.debug.xcconfig"; path = "Target Support Files/Pods-CrashlyticsCocoaPods/Pods-CrashlyticsCocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
-		F492B731069D5957511F1CA7 /* Pods-CrashlyticsCocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashlyticsCocoaPods.release.xcconfig"; path = "Target Support Files/Pods-CrashlyticsCocoaPods/Pods-CrashlyticsCocoaPods.release.xcconfig"; sourceTree = "<group>"; };
+		8453FD580E7D718136108089 /* Pods-CrashlyticsCocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashlyticsCocoaPods.debug.xcconfig"; path = "Target Support Files/Pods-CrashlyticsCocoaPods/Pods-CrashlyticsCocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
+		C1209F43A026A67CE1DF12A5 /* Pods-CrashlyticsCocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashlyticsCocoaPods.release.xcconfig"; path = "Target Support Files/Pods-CrashlyticsCocoaPods/Pods-CrashlyticsCocoaPods.release.xcconfig"; sourceTree = "<group>"; };
+		FC343B8E9648D8BC48345EBD /* Pods_CrashlyticsCocoaPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrashlyticsCocoaPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,20 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA58DE8FF1CBB76F1E8D5548 /* Pods_CrashlyticsCocoaPods.framework in Frameworks */,
+				F3E0B04D8FD171D8A443CBBB /* Pods_CrashlyticsCocoaPods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BDE8BC3253F1F3191799D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC343B8E9648D8BC48345EBD /* Pods_CrashlyticsCocoaPods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61A6F3942CCA222E00BE127A = {
 			isa = PBXGroup;
 			children = (
 				61A6F3BE2CCA223700BE127A /* CrashlyticsCocoaPods */,
 				61A6F39E2CCA222E00BE127A /* Products */,
 				FE9C0A39D8C15C4E62FDE006 /* Pods */,
-				FF1AF090EEA5113CCDEE2A86 /* Frameworks */,
+				4BDE8BC3253F1F3191799D28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,18 +88,10 @@
 		FE9C0A39D8C15C4E62FDE006 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F37939B81A795F3B47EE5617 /* Pods-CrashlyticsCocoaPods.debug.xcconfig */,
-				F492B731069D5957511F1CA7 /* Pods-CrashlyticsCocoaPods.release.xcconfig */,
+				8453FD580E7D718136108089 /* Pods-CrashlyticsCocoaPods.debug.xcconfig */,
+				C1209F43A026A67CE1DF12A5 /* Pods-CrashlyticsCocoaPods.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FF1AF090EEA5113CCDEE2A86 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				68631A1C08FCC3024281DE90 /* Pods_CrashlyticsCocoaPods.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,11 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61A6F3B02CCA223000BE127A /* Build configuration list for PBXNativeTarget "CrashlyticsCocoaPods" */;
 			buildPhases = (
-				997129DDAD6F5AF787DE437D /* [CP] Check Pods Manifest.lock */,
+				3FB4F9F0E053873DF9E1F02C /* [CP] Check Pods Manifest.lock */,
 				61A6F3992CCA222E00BE127A /* Sources */,
 				61A6F39A2CCA222E00BE127A /* Frameworks */,
 				61A6F39B2CCA222E00BE127A /* Resources */,
-				F00D6561DB76EA321710FF49 /* [CP] Embed Pods Frameworks */,
+				58EFCA129AD23174D22430C5 /* [CP] Embed Pods Frameworks */,
 				61A6F3C82CCA256D00BE127A /* ShellScript */,
 			);
 			buildRules = (
@@ -165,24 +165,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		61A6F3C82CCA256D00BE127A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
-		};
-		997129DDAD6F5AF787DE437D /* [CP] Check Pods Manifest.lock */ = {
+		3FB4F9F0E053873DF9E1F02C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,7 +187,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F00D6561DB76EA321710FF49 /* [CP] Embed Pods Frameworks */ = {
+		58EFCA129AD23174D22430C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,6 +203,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrashlyticsCocoaPods/Pods-CrashlyticsCocoaPods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		61A6F3C82CCA256D00BE127A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -258,7 +260,7 @@
 /* Begin XCBuildConfiguration section */
 		61A6F3B12CCA223000BE127A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F37939B81A795F3B47EE5617 /* Pods-CrashlyticsCocoaPods.debug.xcconfig */;
+			baseConfigurationReference = 8453FD580E7D718136108089 /* Pods-CrashlyticsCocoaPods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -287,7 +289,7 @@
 		};
 		61A6F3B22CCA223000BE127A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F492B731069D5957511F1CA7 /* Pods-CrashlyticsCocoaPods.release.xcconfig */;
+			baseConfigurationReference = C1209F43A026A67CE1DF12A5 /* Pods-CrashlyticsCocoaPods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
