@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         if (storedName as? String) != nil
         {
-            UserDefaults.standard.removeObject(forKey: "name")
+            UserDefaults.standard.removeObject(forKey: "name")//burada removeObject ıle name degerındekı keyı sılıyor yanı tuttugu veriyi
             nameLabel.text = "Name: "
         }
         

@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5 , target: self, selector: #selector(hideKenny), userInfo: nil, repeats: true)
         hideKenny()
-        
+//        var sda = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true )
     }
     
     @objc func hideKenny() {

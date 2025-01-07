@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         
         //haberleşmek için gitmek için session kullanıyoz
         let session  = URLSession.shared  // istek atma
+        //Closure :D
         
         let task = session.dataTask(with: url!) { (data, response, error) in
             if error != nil {
@@ -50,21 +51,21 @@ class ViewController: UIViewController {
                         let jsonResponse = try  JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String,Any >
                         
                         //ASYNC
-                        
                         DispatchQueue.main.async {
+                            
+                            // print(jsonResponse["rates"])
                             if let rates = jsonResponse["rates"] as? [String : Any] {
                                 //print(rates)
-                                
-                                if let cad = rates["CAD"] as? Double {
-                                    self.cadLabel.text = "CAD: \(cad)"
+                                if let cad = rates["CAD"] as? Double,
+                                   let tryRate = rates["TRY"] as? Double,
+                                   let usdRate = rates["USD"] as? Double {
+                                    let cadValue = (cad * tryRate) / usdRate
+                                    self.cadLabel.text = "CAD: \(String(format: "%.2f", cadValue))"
                                 }
                                 
                                 if let chf = rates["CHF"] as? Double {
-                                    self.chfLabel.text = "CHF: \(chf)"
+                                    self.chfLabel.text = "CHF: \(String(format : "%.2f",chf))"
                                 }
-                                
-                              
-                                
                                 if let jpy = rates["JPY"] as? Double {
                                     self.jpyLabel.text = "JPY: \(jpy)"
                                 }
@@ -77,15 +78,13 @@ class ViewController: UIViewController {
                                     self.tryLabel.text = "TRY: \(turkish)"
                                 }
                                 
-                                
                             }
                         }
                         
                     } catch {
                         print("error")
                     }
-                   
-                    }
+                }
             }
         }
             

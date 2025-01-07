@@ -16,8 +16,6 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private let remoteConfig = RemoteConfig.remoteConfig()
-    
     private let view2: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
@@ -40,6 +38,8 @@ class ViewController: UIViewController {
            button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
            view.addSubview(button)
        }
+    
+    private let remoteConfig = RemoteConfig.remoteConfig()
     
     func fetchvalues() {
         //shows_new_ui
